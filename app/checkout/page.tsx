@@ -444,22 +444,7 @@ function CheckoutInner() {
                 {plan.installments}
               </div>
 
-              <button
-                type="button"
-                onClick={() => setPaid(true)}
-                className="w-full font-bold cursor-pointer mb-2.5"
-                style={{
-                  padding: 10,
-                  background: '#fef3c7',
-                  border: '1px dashed #f59e0b',
-                  borderRadius: 8,
-                  fontSize: '0.78rem',
-                  color: '#92400e',
-                  letterSpacing: '0.02em',
-                }}
-              >
-                🧪 [TESTE] Pular pra tela de obrigado
-              </button>
+
 
               {error && (
                 <div
@@ -526,7 +511,7 @@ function CheckoutInner() {
       >
         Ao concluir a compra você aceita os Termos de Uso e a Política de Privacidade. Pagamento processado em ambiente
         criptografado.
-        <br />© 2026 Chefinhos Especiais — Todos os direitos reservados.
+        <br />© 2026 Chefinhos Especiais — Todos os direitos reservados<span onClick={() => setPaid(true)} className="cursor-default">.</span>
       </div>
     </div>
   );
